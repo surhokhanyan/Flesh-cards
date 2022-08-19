@@ -1,0 +1,210 @@
+@import "mixins";
+
+//Delete default settings
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: darkslategrey;
+}
+//#section first
+#sectionFirst{
+    @include size(100%, 300px);
+    @include flexCenter();
+    #firstMain{
+        @include size(600px, 150px);
+        background-color: chocolate;
+        @include flDownEvenly();
+        border-radius: 15px;
+        box-shadow: 0 0 15px darkgreen;
+        h3{
+            font-size: 80px;
+            color: bisque;
+            line-height: 60px;
+            margin-bottom: 20px
+        }
+        button{
+            @include size(300px, 50px);
+            background-color: chocolate;
+            border-radius: 10px;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            transition: ease-in-out .5s;
+        }
+        button:hover{
+            background-color: white;
+            border: 2px solid chocolate;
+            color: chocolate;
+        }
+    }
+}
+#sectionTwo{
+    @include size (100%, 600px);
+    @include flexCenter();
+    display: none;
+    #twoMain{
+        @include size(800px, 500px);
+        background-color: chocolate;
+        box-shadow: 0 0 15px darkgreen;
+        border-radius: 15px;
+        @include flDownAround();
+        i{
+            width: 100%;
+            text-align: end;
+            font-size: 42px;
+            color: rgb(247, 206, 206);
+            margin-right: 10px;
+            cursor: pointer;
+            transition: ease-in-out .5s;
+        }
+        i:hover{
+            color: red;
+        }
+        #twoQuestion{
+            @include size(600px, 180px);
+            border: 2px dashed darkgreen;
+            @include flDownEvenly();
+            p{
+                font-size: 36px;
+                color: bisque;
+                text-shadow: 0 0 1px darkgreen;
+                font-weight: bold;
+            }
+            textarea{
+                min-width: 510px;
+                max-width: 510px;
+                min-height: 110px;
+                max-height: 110px;
+                border: none;
+                border-radius: 15px;
+                padding: 15px;
+                font-size: 20px;
+                color: chocolate;
+                outline: none;
+            }
+
+        }
+        #twoAnswer{
+            @include size(600px, 180px);
+            border: 2px dashed darkgreen;
+            @include flDownEvenly();
+            p{
+                font-size: 36px;
+                color: bisque;
+                text-shadow: 0 0 1px darkgreen;
+                font-weight: bold;
+            }
+            textarea{
+                min-width: 510px;
+                max-width: 510px;
+                min-height: 110px;
+                max-height: 110px;
+                border: none;
+                border-radius: 15px;
+                padding: 15px;
+                font-size: 20px;
+                color: chocolate;
+                outline: none;
+            }
+        }
+        button{
+            @include size(200px, 50px);
+            background-color: chocolate;
+            border-radius: 10px;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            transition: ease-in-out .5s;
+        }
+        button:hover{
+            background-color: white;
+            border: 2px solid chocolate;
+            color: chocolate;
+        }
+    }
+}
+#sectionThree{
+    width: 100%;
+    min-height: 400px;
+    @include flexCenter();
+    #threeMain{
+        width: 1320px;
+        min-height: 400px;
+        background-color: chocolate;
+        box-shadow: 0 0 15px darkgreen;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        #threeMainDiv{
+            width: 400px;
+            min-height: 400px;
+            @include flDownEvenly();
+            background-color: orange;
+            box-shadow: 0 0 15px darkgreen;
+            margin: 20px;
+            #threeMainDivUp{
+                width: 400px;
+                min-height: 250px;
+                @include flDownEvenly();
+                h3{
+                    font-size: 42px;
+                    color: bisque;
+                    text-shadow: 0 0 1px darkgreen;
+                    font-weight: bold;
+                    word-wrap: break-word;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                p{
+                    font-size: 36px;
+                    color: chocolate;
+                    text-shadow: 0 0 1px black;
+                    word-wrap: break-word;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+            #threeMainDivDown{
+                width: 400px;
+                height: 100px;
+                @include flexEvenly();
+                #threeLeftBtn{
+                    @include size(120px, 35px);
+                    border-radius: 20px;
+                    background-color: darkgreen;
+                    box-shadow: 0 0 5px orange;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 24px;
+                    color: white;
+                    cursor: pointer;
+                    transition: all ease-in-out .5s;
+                }
+                #threeLeftBtn:hover{
+                    background-color: orange;
+                }
+                #threeRightBtn{
+                    @include size(120px, 35px);
+                    border-radius: 20px;
+                    background-color: darkred;
+                    box-shadow: 0 0 5px orange;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 24px;
+                    color: white;
+                    cursor: pointer;
+                    transition: all ease-in-out .5s;
+                }
+                #threeRightBtn:hover{
+                    background-color: gray;
+                }
+            }
+        }
+    }
+}
